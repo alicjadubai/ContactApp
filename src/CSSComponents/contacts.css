@@ -257,4 +257,7 @@ div#list .pic {
   header h1 {
     display: none;
   }
+  .AlphabetNav {
+    justify-content: flex-start;
+  }
 }
