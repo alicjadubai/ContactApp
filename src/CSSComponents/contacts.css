@@ -252,3 +252,9 @@ div#list .pic {
   background: #f46353;
   color: white;
 }
+
+@media screen and (max-width: 631px) {
+  header h1 {
+    display: none;
+  }
+}

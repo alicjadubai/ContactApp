@@ -9,7 +9,6 @@ const List = ({
   personnel,
   filter,
   activeLetter,
-  onClick,
   selectedDivision,
   selectedBranch,
   CurrentPagination,

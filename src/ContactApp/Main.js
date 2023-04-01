@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Filters from "./Filters";
-import Structure from "./Structure";
 import List from "./List";
 import Tiles from "./Titles";
-import Pagination from "./Pagination";
 import "../CSSComponents/contacts.css";
 
 function SharePointList() {
@@ -14,7 +12,6 @@ function SharePointList() {
   const [nationality, setNationality] = useState([]);
   const [pictures, setPictures] = useState([]);
   const [view, setView] = useState("tiles");
-  const [isDetailsHidden, setIsDetailsHidden] = useState(true);
   const [activeLetter, setActiveLetter] = useState("");
   const [filter, setFilter] = useState("");
   const [selectedDivision, setSelectedDivision] = useState();
@@ -144,13 +141,6 @@ function SharePointList() {
         const filteredPersonnel = personnel.filter(
           (person) => person.FL == clickedLetter
         );
-
-        if (filteredPersonnel.length > 0) {
-          setItemsPerPage(100);
-          const filteredelelemenst = filteredItems.filter((item) =>
-            filteredPersonnel.some((person) => person.Id === item.PersonnelId)
-          );
-        }
       }
     };
 
@@ -239,7 +229,6 @@ function SharePointList() {
               pictures={pictures}
               filter={filter}
               activeLetter={activeLetter}
-              onClick={handleThumbnailClick}
               selectedDivision={selectedDivision}
               selectedBranch={selectedBranch}
               setCurrentPagination={setCurrentPagination}

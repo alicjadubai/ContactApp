@@ -66,6 +66,7 @@ const Tiles = ({
             {el.pictureItem ? (
               <div onClick={() => onClick(el.item.Id)} className="pic">
                 <img
+                  alt={index}
                   src={`https://hqmncnetest.sharepoint.com/sites/telephoneDirectory2/Pictures/${el.pictureItem.Title}.jpg`}
                 />
               </div>

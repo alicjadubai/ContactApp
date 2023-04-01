@@ -17,8 +17,7 @@ const Filters = ({
 
   const listBranch =
     "https://hqmncnetest.sharepoint.com/sites/telephoneDirectory2/_api/web/lists/getbytitle('Branch')/items";
-  const listNationality =
-    "https://hqmncnetest.sharepoint.com/sites/telephoneDirectory2/_api/web/lists/getbytitle('Nationality')/items";
+
   const [branches, setBranches] = useState([]);
   const [Division, setDivision] = useState(null);
 
@@ -65,6 +64,7 @@ const Filters = ({
         ? branches.filter((item) => item.DivisionId == selectedDivision)
         : branches
     );
+    selectedDivision == "Select division" && setSelectedBranch("");
   }
   function handleBranchChange(event) {
     const selectedBranch = event.target.value;
@@ -72,7 +72,6 @@ const Filters = ({
   }
   function handleNationalityChange(event) {
     const selectedNationality = event.target.value;
-
     setFilteredNat(selectedNationality);
   }
   return (
