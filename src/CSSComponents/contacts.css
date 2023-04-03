@@ -260,4 +260,7 @@ div#list .pic {
   .AlphabetNav {
     justify-content: flex-start;
   }
+  button.btn.js-tile {
+    display: none;
+  }
 }
