@@ -65,13 +65,16 @@ const Tiles = ({
           <div key={el.item.Id} className="thumbnail">
             {el.pictureItem ? (
               <div onClick={() => onClick(el.item.Id)} className="pic">
-                <img
+                {/* <img
                   alt={index}
                   src={`https://hqmncnetest.sharepoint.com/sites/telephoneDirectory2/Pictures/${el.pictureItem.Title}.jpg`}
-                />
+                /> */}
+                <img src={`https://image.ibb.co/gE7cc5/user_4.jpg`} />
               </div>
             ) : (
-              <div className="pic"></div>
+              <div className="pic">
+                <img src={`https://image.ibb.co/gE7cc5/user_4.jpg`} />
+              </div>
             )}
 
             <div className="details ">
