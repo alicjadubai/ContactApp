@@ -44,7 +44,7 @@ header h1::before {
   content: "";
   width: 126px;
   height: 66px;
-  background: url(http://localhost:3000/static/media/crest.1106160128dfb00f6f99.png);
+  background: url(http://localhost:3000/static/media/crest.png);
   background-repeat: no-repeat;
   position: absolute;
   left: 10px;
